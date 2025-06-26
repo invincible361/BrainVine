@@ -267,4 +267,29 @@ body::after {
   body::before, body::after {
     display: none;
   }
+}
+
+/* Custom Scrollbar with Peacock Feather */
+::-webkit-scrollbar {
+  width: 18px;
+  background: var(--soft-yellow);
+}
+::-webkit-scrollbar-thumb {
+  background: url('peacock_feather.jpg') center/cover no-repeat, var(--krishna-blue);
+  border-radius: 12px;
+  border: 3px solid var(--soft-yellow);
+  min-height: 40px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: url('peacock_feather.jpg') center/cover no-repeat, var(--peacock-green);
+}
+::-webkit-scrollbar-track {
+  background: var(--soft-yellow);
+  border-radius: 12px;
+}
+
+/* For Firefox */
+html {
+  scrollbar-color: var(--krishna-blue) var(--soft-yellow);
+  scrollbar-width: thin;
 } 

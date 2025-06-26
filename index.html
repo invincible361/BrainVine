@@ -26,7 +26,7 @@
   <section class="hero">
     <h2>Your Future is Bright!</h2>
     <p>Spoken English & IELTS/PTE Classes | Certified Teachers | Flexible Batches</p>
-    <a href="#contact" class="button">Request a Free Demo</a>
+    <button type="button" class="button" id="request-demo-btn">Request a Free Demo</button>
   </section>
   <section id="about" class="section">
     <h2 class="section-title">Organisation Summary</h2>
@@ -88,5 +88,49 @@
   <footer>
     &copy; 2025 BrainVine Classes. All rights reserved.
   </footer>
+
+  <!-- Registration Modal -->
+  <div id="demo-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2>Request a Free Demo</h2>
+      <form id="demo-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="3" placeholder="Your message (optional)"></textarea>
+        <button type="submit" class="button">Send on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Modal logic
+    const modal = document.getElementById('demo-modal');
+    const openBtn = document.getElementById('request-demo-btn');
+    const closeBtn = document.getElementById('close-modal');
+    openBtn.onclick = () => { modal.style.display = 'block'; };
+    closeBtn.onclick = () => { modal.style.display = 'none'; };
+    window.onclick = (event) => { if (event.target === modal) modal.style.display = 'none'; };
+
+    // WhatsApp integration
+    document.getElementById('demo-form').onsubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      let text = `Hello, I would like to request a free demo.\nName: ${name}\nPhone: ${phone}\nEmail: ${email}`;
+      if (message) text += `\nMessage: ${message}`;
+      const url = `https://wa.me/917696538769?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+      modal.style.display = 'none';
+      this.reset();
+    };
+  </script>
 </body>
 </html> 

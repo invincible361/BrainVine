@@ -241,4 +241,30 @@ footer::before {
 #demo-form button.button {
   margin-top: 1rem;
   width: 100%;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  width: 120px;
+  height: 100vh;
+  background: url('peacock-feather.png') center top no-repeat;
+  background-size: contain;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+body::before {
+  left: 0;
+  transform: scaleX(-1); /* Mirror for left side */
+}
+body::after {
+  right: 0;
+}
+@media (max-width: 900px) {
+  body::before, body::after {
+    display: none;
+  }
 } 

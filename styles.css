@@ -271,7 +271,7 @@ body::after {
 
 /* Custom Scrollbar with Peacock Feather */
 ::-webkit-scrollbar {
-  width: 18px;
+  width: 24px;
   background: var(--soft-yellow);
 }
 ::-webkit-scrollbar-thumb {

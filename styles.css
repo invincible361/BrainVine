@@ -275,13 +275,13 @@ body::after {
   background: var(--soft-yellow);
 }
 ::-webkit-scrollbar-thumb {
-  background: url('peacock_feather.jpg') center/contain no-repeat, var(--krishna-blue);
+  background: url('krishna_flute_rotated.png') center/contain no-repeat, var(--krishna-blue);
   border-radius: 12px;
   border: 3px solid var(--soft-yellow);
   min-height: 40px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: url('peacock_feather.jpg') center/contain no-repeat, var(--peacock-green);
+  background: url('krishna_flute_rotated.png') center/contain no-repeat, var(--peacock-green);
 }
 ::-webkit-scrollbar-track {
   background: var(--soft-yellow);
@@ -298,17 +298,7 @@ html {
 #main-nav {
   position: relative;
   z-index: 100;
-  transition: box-shadow 0.3s, background 0.3s;
-}
-.sticky-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  background: var(--white);
-  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
-  border-radius: 0 0 1.5rem 1.5rem;
-  padding-bottom: 0.5rem;
+  transition: box-shadow 0.3s, background 0.3s, transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 /* Fade-in effect for sections */

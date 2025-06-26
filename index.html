@@ -158,17 +158,6 @@
       this.reset();
     };
 
-    // Sticky navbar effect
-    const nav = document.getElementById('main-nav');
-    const navOffset = nav.offsetTop;
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > navOffset) {
-        nav.classList.add('sticky-nav');
-      } else {
-        nav.classList.remove('sticky-nav');
-      }
-    });
-
     // Fade-in effect for sections
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

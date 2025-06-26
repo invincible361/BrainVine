@@ -14,13 +14,14 @@
       <figcaption style="font-family: 'Lora', serif; color: var(--krishna-blue); font-size: 1.15rem; margin-bottom: 1.2rem; text-align: center; max-width: 350px;">"Where there is faith, there is victory."<br><span style="color: var(--krishna-gold); font-size: 1rem;">– Lord Krishna</span></figcaption>
     </figure>
     <h1>BrainVine Classes</h1>
-    <nav>
+    <nav id="main-nav">
       <a href="#about">About</a>
       <a href="#courses">Courses</a>
       <a href="#teachers">Teachers</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#events">Events</a>
       <a href="#contact">Contact</a>
+      <a href="#flyers">Flyers</a>
     </nav>
   </header>
   <section class="hero" style="background: linear-gradient(135deg, rgba(25,118,210,0.7) 0%, rgba(67,160,71,0.6) 100%), url('krishan-hero2.jpg') top center/80% no-repeat; background-blend-mode: overlay; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
@@ -28,7 +29,7 @@
     <p>Spoken English & IELTS/PTE Classes | Certified Teachers | Flexible Batches</p>
     <button type="button" class="button" id="request-demo-btn">Request a Free Demo</button>
   </section>
-  <section id="about" class="section">
+  <section id="about" class="section" data-section>
     <figure style="float:left; margin: 0 2rem 1rem 0; max-width: 180px;">
       <img src="krishna_makhan.jpg" alt="Krishna with Makhan" style="width:100%; border-radius:1rem; box-shadow:0 2px 12px rgba(25,118,210,0.12);">
       <figcaption style="text-align:center; color:var(--krishna-blue); font-size:0.95rem;">Child Krishna with Makhan</figcaption>
@@ -37,7 +38,7 @@
     <p>At BrainVine Classes, our mission is to empower both children and adults to become confident English speakers—through structured, affordable, and high-quality spoken English courses. We believe in making language learning simple and accessible, especially by offering bilingual support (English + Hindi, even Punjabi if you know) to ensure that every learner, regardless of their background, can grasp the language effectively.</p>
     <div style="clear:both;"></div>
   </section>
-  <section id="courses" class="section">
+  <section id="courses" class="section" data-section>
     <figure style="float:right; margin: 0 0 1rem 2rem; max-width: 180px;">
       <img src="krishna_study.jpg" alt="Krishna Studying" style="width:100%; border-radius:1rem; box-shadow:0 2px 12px rgba(25,118,210,0.12);">
       <figcaption style="text-align:center; color:var(--krishna-blue); font-size:0.95rem;">Krishna Studying</figcaption>
@@ -60,7 +61,7 @@
     </div>
     <div style="clear:both;"></div>
   </section>
-  <section id="teachers" class="section">
+  <section id="teachers" class="section" data-section>
     <figure style="float:left; margin: 0 2rem 1rem 0; max-width: 180px;">
       <img src="krishna_study2.jpg" alt="Krishna Teaching" style="width:100%; border-radius:1rem; box-shadow:0 2px 12px rgba(25,118,210,0.12);">
       <figcaption style="text-align:center; color:var(--krishna-blue); font-size:0.95rem;">Krishna Teaching</figcaption>
@@ -77,7 +78,7 @@
     </ul>
     <div style="clear:both;"></div>
   </section>
-  <section id="testimonials" class="section">
+  <section id="testimonials" class="section" data-section>
     <figure style="display:block; margin: 0 auto 1rem auto; max-width: 220px;">
       <img src="krishna_quote.jpg" alt="Krishna Quote" style="width:100%; border-radius:1rem; box-shadow:0 2px 12px rgba(25,118,210,0.12);">
       <figcaption style="text-align:center; color:var(--krishna-blue); font-size:0.95rem;">Inspirational Krishna Quote</figcaption>
@@ -87,7 +88,7 @@
     <div class="testimonial">"Thanks to the IELTS classes here, I scored a 7.5 band! The speaking practice and feedback were incredibly helpful."<br><b>– Aman Thakur, IELTS Student</b></div>
     <div class="testimonial">"The teachers are friendly and highly professional. Their grammar sessions helped me write better essays and letters for college."<br><b>– Simranjeet Kaur, College Student</b></div>
   </section>
-  <section id="events" class="section">
+  <section id="events" class="section" data-section>
     <h2 class="section-title">Events & Collaborations</h2>
     <ul>
       <li>English Speaking Workshop – General Gurnam Singh Public School, Sangrur</li>
@@ -97,12 +98,19 @@
       <li>IELTS & PTE Session – Goswami Dutta SD College, Chandigarh</li>
     </ul>
   </section>
-  <section id="contact" class="section">
+  <section id="contact" class="section" data-section>
     <h2 class="section-title">Contact Us</h2>
     <p>Email: <a href="mailto:brainvineclasses@gmail.com">brainvineclasses@gmail.com</a></p>
     <p>Phone: <a href="tel:+917696538769">+91 76965-38769</a></p>
     <p>Address: Agar Nagar 252, Main Road, Sangrur | Udyan Path Sec-36 near Chai Churi, Chandigarh</p>
     <a href="https://wa.me/917696538769" class="button">Contact on WhatsApp</a>
+  </section>
+  <section id="flyers" class="section" data-section>
+    <h2 class="section-title">Flyers</h2>
+    <ul>
+      <li><a href="flyer1.jpg" target="_blank">Download Flyer 1 (JPG)</a></li>
+      <li><a href="flyer2.pdf" target="_blank">Download Flyer 2 (PDF)</a></li>
+    </ul>
   </section>
   <footer>
     &copy; 2025 BrainVine Classes. All rights reserved.
@@ -150,6 +158,29 @@
       modal.style.display = 'none';
       this.reset();
     };
+
+    // Sticky navbar effect
+    const nav = document.getElementById('main-nav');
+    const navOffset = nav.offsetTop;
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > navOffset) {
+        nav.classList.add('sticky-nav');
+      } else {
+        nav.classList.remove('sticky-nav');
+      }
+    });
+
+    // Fade-in effect for sections
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('[data-section]').forEach(section => {
+      observer.observe(section);
+    });
   </script>
 </body>
 </html> 

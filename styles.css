@@ -292,4 +292,32 @@ body::after {
 html {
   scrollbar-color: var(--krishna-blue) var(--soft-yellow);
   scrollbar-width: thin;
+}
+
+/* Sticky Navbar */
+#main-nav {
+  position: relative;
+  z-index: 100;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: var(--white);
+  box-shadow: 0 4px 18px rgba(25, 118, 210, 0.10);
+  border-radius: 0 0 1.5rem 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Fade-in effect for sections */
+[data-section] {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+}
+.fade-in {
+  opacity: 1 !important;
+  transform: none !important;
 } 

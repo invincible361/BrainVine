@@ -270,23 +270,23 @@ body::after {
 }
 
 ::-webkit-scrollbar {
-  width: 32px;
+  width: 20px;
 }
 ::-webkit-scrollbar-thumb {
-  background: url('krishna_fluteleft.png') center/contain no-repeat;
-  border-radius: 12px;
+  background: url('krishna_fluteleft.png') center/70% 100% no-repeat;
+  border-radius: 0px;
   border: 1px solid var(--soft-yellow);
-  min-height: 40px;
+  min-height: 100px;
 }
 ::-webkit-scrollbar-track {
-  background: #fffde7;
-}
+  /* background: #fffde7;
+} */
 
 /* For Firefox */
-html {
+/* html {
   scrollbar-color: var(--krishna-blue) var(--soft-yellow);
   scrollbar-width: thin;
-}
+} */
 
 /* Sticky Navbar */
 #main-nav {

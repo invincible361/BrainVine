@@ -70,7 +70,7 @@
           // Show success message
           document.getElementById('payment-message').style.display = 'block';
           document.getElementById('payment-message').innerText = 'Payment successful! Payment ID: ' + response.razorpay_payment_id + '\nYou will receive confirmation by email and WhatsApp.';
-          // TODO: Send details to your backend for email/WhatsApp notification
+          // TODO: If you want to notify your backend after payment, POST to https://brainvine.onrender.com/api/payment or similar endpoint here.
         },
         prefill: {
           name: name,

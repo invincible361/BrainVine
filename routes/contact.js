@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { sendEmail } = require('../utils/email');
-const { sendWhatsApp } = require('../utils/whatsapp');
 
 router.post('/', async (req, res) => {
   const { name, email, phone, message } = req.body;
@@ -11,8 +10,6 @@ router.post('/', async (req, res) => {
   try {
     // Send email to admin
     await sendEmail(process.env.ADMIN_EMAIL, subject, text);
-    // Send WhatsApp to admin
-    await sendWhatsApp(process.env.ADMIN_WHATSAPP, `Contact Form:\n${text}`);
     res.json({ status: 'ok' });
   } catch (err) {
     console.error('Contact notification error:', err);

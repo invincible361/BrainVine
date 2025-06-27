@@ -38,6 +38,23 @@ header::after {
   pointer-events: none;
 }
 
+nav#main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--peacock-feather);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+  height: 68px;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+}
+
+nav#main-nav a {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -291,12 +308,6 @@ body::after {
 }
 ::-webkit-scrollbar-track {
   /* background: #fffde7; */
-}
-
-#main-nav {
-  position: relative;
-  z-index: 100;
-  transition: box-shadow 0.3s, background 0.3s, transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 /* Fade-in effect for sections */

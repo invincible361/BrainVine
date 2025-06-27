@@ -1,11 +1,18 @@
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
 const cors = require('cors');
+const bodyParser = require('body-parser');
+const paymentRoutes = require('./routes/payment');
+const contactRoutes = require('./routes/contact');
+require('dotenv').config();
+
 const app = express();
 const db = new sqlite3.Database('session_logs.db');
+const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use(bodyParser.json());
 
 // Create table if not exists
 db.run(`CREATE TABLE IF NOT EXISTS sessions (
@@ -24,4 +31,23 @@ app.post('/log-session', (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Server running on port 3000')); 
+// Payment webhook route
+app.use('/webhook/payment', paymentRoutes);
+
+// Contact form route
+app.use('/api/contact', contactRoutes);
+
+// Health check
+app.get('/', (req, res) => {
+  res.send('BrainVine Backend is running.');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// TODO:
+// - Set up .env for Razorpay, email, WhatsApp credentials
+// - Implement /routes/payment.js for webhook verification and notifications
+// - Add /utils/email.js and /utils/whatsapp.js for notifications
+// - (Optional) Add database for payment records 

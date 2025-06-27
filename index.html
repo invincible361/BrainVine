@@ -90,19 +90,19 @@
     <h2 class="section-title">Testimonials</h2>
     <div class="testimonial-container">
       <div class="testimonial active">
-        <p>“Ma’am’s way of teaching is amazing. I have improved my speaking a lot!”</p>
+        <p>"Ma'am's way of teaching is amazing. I have improved my speaking a lot!"</p>
         <h4>– Rahul, IELTS Student</h4>
       </div>
       <div class="testimonial">
-        <p>“Very helpful classes. Highly recommended for Spoken English.”</p>
+        <p>"Very helpful classes. Highly recommended for Spoken English."</p>
         <h4>– Pooja, Spoken English Batch</h4>
       </div>
       <div class="testimonial">
-        <p>“Best online coaching! Loved the interaction and daily practice.”</p>
+        <p>"Best online coaching! Loved the interaction and daily practice."</p>
         <h4>– Aman, IELTS Batch</h4>
       </div>
       <div class="testimonial">
-        <p>“Classes on BrainVine are full of energy and learning!”</p>
+        <p>"Classes on BrainVine are full of energy and learning!"</p>
         <h4>– Simran, Spoken English Student</h4>
       </div>
     </div>
@@ -185,25 +185,6 @@
     document.querySelectorAll('[data-section]').forEach(section => {
       observer.observe(section);
     });
-
-    // Session logging
-    (function() {
-      let name = sessionStorage.getItem('bv_name');
-      if (!name) {
-        name = prompt('Please enter your name for session log:');
-        if (name) sessionStorage.setItem('bv_name', name);
-      }
-      if (name) {
-        fetch('http://localhost:3000/log-session', {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({name})
-        }).then(res => res.json()).then(data => {
-          // Optionally handle response
-          console.log('Session logged:', data);
-        });
-      }
-    })();
 
     // Testimonial carousel
     let index = 0;

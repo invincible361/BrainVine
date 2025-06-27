@@ -282,7 +282,7 @@ body::after {
   width: 20px;
 }
 ::-webkit-scrollbar-thumb {
-  background: url('krishna_fluteleft.png') center/70% 100% no-repeat;
+  background: url('flute.png') center/70% 100% no-repeat;
   border-radius: 0px;
   border: 1px solid var(--soft-yellow);
   min-height: 100px;

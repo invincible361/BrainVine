@@ -88,9 +88,24 @@
       <figcaption style="text-align:center; color:var(--krishna-blue); font-size:0.95rem;">Inspirational Krishna Quote</figcaption>
     </figure>
     <h2 class="section-title">Testimonials</h2>
-    <div class="testimonial">"I always struggled with speaking English, but BrainVine Classes made it fun and easy. Now, I can speak fluently and confidently in school debates!"<br><b>– Riya Sharma, Class 10 Student</b></div>
-    <div class="testimonial">"Thanks to the IELTS classes here, I scored a 7.5 band! The speaking practice and feedback were incredibly helpful."<br><b>– Aman Thakur, IELTS Student</b></div>
-    <div class="testimonial">"The teachers are friendly and highly professional. Their grammar sessions helped me write better essays and letters for college."<br><b>– Simranjeet Kaur, College Student</b></div>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <p>“Ma’am’s way of teaching is amazing. I have improved my speaking a lot!”</p>
+        <h4>– Rahul, IELTS Student</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Very helpful classes. Highly recommended for Spoken English.”</p>
+        <h4>– Pooja, Spoken English Batch</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Best online coaching! Loved the interaction and daily practice.”</p>
+        <h4>– Aman, IELTS Batch</h4>
+      </div>
+      <div class="testimonial">
+        <p>“Classes on BrainVine are full of energy and learning!”</p>
+        <h4>– Simran, Spoken English Student</h4>
+      </div>
+    </div>
   </section>
   <section id="events" class="section" data-section>
     <h2 class="section-title">Events & Collaborations</h2>
@@ -189,6 +204,16 @@
         });
       }
     })();
+
+    // Testimonial carousel
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial-container .testimonial');
+    function showTestimonial() {
+      testimonials.forEach(t => t.classList.remove('active'));
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
+    }
+    setInterval(showTestimonial, 3000);
   </script>
 </body>
 </html> 

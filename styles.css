@@ -277,27 +277,22 @@ body::after {
     display: none;
   }
 }
-
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 29px;
+  background-color: transparent;
+  color: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: url('flute.png') center/70% 100% no-repeat;
-  border-radius: 0px;
-  border: 1px solid var(--soft-yellow);
-  min-height: 100px;
+  background: url('flute.png') center/50px 40% no-repeat;
+  border-radius: 1px;
+  background-color: none;
+  min-height: 8px;
+  color: none;
 }
-/* ::-webkit-scrollbar-track { */
-  /* background: #fffde7;
-} */
+::-webkit-scrollbar-track {
+  /* background: #fffde7; */
+}
 
-/* For Firefox */
-/* html {
-  scrollbar-color: var(--krishna-blue) var(--soft-yellow);
-  scrollbar-width: thin;
-} */
-
-/* Sticky Navbar */
 #main-nav {
   position: relative;
   z-index: 100;

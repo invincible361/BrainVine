@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .testimonial-container {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonial {
+      display: none;
+      animation: fade 1s ease-in-out;
+    }
+    .testimonial.active {
+      display: block;
+    }
+    @keyframes fade {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .testimonial p {
+      font-size: 16px;
+      color: #333;
+      margin: 10px 0;
+    }
+    .testimonial h4 {
+      margin-top: 10px;
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="testimonial-container">
+  <div class="testimonial active">
+    <p>“Ma’am’s way of teaching is amazing. I have improved my speaking a lot!”</p>
+    <h4>– Rahul, IELTS Student</h4>
+  </div>
+  <div class="testimonial">
+    <p>“Very helpful classes. Highly recommended for Spoken English.”</p>
+    <h4>– Pooja, Spoken English Batch</h4>
+  </div>
+  <div class="testimonial">
+    <p>“Best online coaching! Loved the interaction and daily practice.”</p>
+    <h4>– Aman, IELTS Batch</h4>
+  </div>
+  <div class="testimonial">
+    <p>“Classes on BrainVine are full of energy and learning!”</p>
+    <h4>– Simran, Spoken English Student</h4>
+  </div>
+</div>
+
+<script>
+  let index = 0;
+  const testimonials = document.querySelectorAll('.testimonial');
+  function showTestimonial() {
+    testimonials.forEach(t => t.classList.remove('active'));
+    index = (index + 1) % testimonials.length;
+    testimonials[index].classList.add('active');
+  }
+  setInterval(showTestimonial, 3000); // Changes review every 3 seconds
+</script>
+
+</body>
+</html>

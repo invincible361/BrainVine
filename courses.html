@@ -118,6 +118,51 @@
 class="btn">Contact for Academic Classes</a>
 </div>
 
+<!-- WhatsApp Demo Request Form -->
+<div style="text-align:center; margin: 40px 0;">
+  <button type="button" class="btn" id="request-demo-btn">Request a Free Demo</button>
+</div>
+<div id="demo-modal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; overflow:auto; background:rgba(25,118,210,0.25); backdrop-filter:blur(2px);">
+  <div class="modal-content" style="background:#fff; margin:5% auto; padding:2rem 1.5rem 1.5rem 1.5rem; border-radius:1.5rem; box-shadow:0 4px 32px rgba(25,118,210,0.18); max-width:400px; position:relative; display:flex; flex-direction:column; align-items:stretch;">
+    <span class="close" id="close-modal" style="color:#1976d2; position:absolute; top:1rem; right:1.5rem; font-size:2rem; font-weight:bold; cursor:pointer; transition:color 0.2s;">&times;</span>
+    <h2>Request a Free Demo</h2>
+    <form id="demo-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="3" placeholder="Your message (optional)"></textarea>
+      <button type="submit" class="btn">Send on WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('demo-modal');
+  const openBtn = document.getElementById('request-demo-btn');
+  const closeBtn = document.getElementById('close-modal');
+  openBtn.onclick = () => { modal.style.display = 'block'; };
+  closeBtn.onclick = () => { modal.style.display = 'none'; };
+  window.onclick = (event) => { if (event.target === modal) modal.style.display = 'none'; };
+
+  document.getElementById('demo-form').onsubmit = function(e) {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    let text = `Hello, I would like to request a free demo.\nName: ${name}\nPhone: ${phone}\nEmail: ${email}`;
+    if (message) text += `\nMessage: ${message}`;
+    const url = `https://wa.me/917696538769?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank');
+    modal.style.display = 'none';
+    this.reset();
+  };
+</script>
+
 <!-- Footer -->
 <footer>
   ©️ 2025 BrainVine Classes | All Rights Reserved

@@ -66,13 +66,20 @@
     }
 
     /* Hover effect for all links */
+    a,
+    .btn,
+    .button,
+    nav a {
+      transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(.4,0,.2,1);
+    }
     a:hover,
     .btn:hover,
     .button:hover,
     nav a:hover {
       background: #e0f0ff !important;
       color: #0066CC !important;
-      transition: background 0.2s, color 0.2s;
+      transform: scale(1.08);
+      transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(.4,0,.2,1);
     }
 
     footer {

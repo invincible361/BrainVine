@@ -192,9 +192,30 @@ footer::before {
     padding: 2rem 0.5rem 1rem 0.5rem;
     min-height: 40vh;
   }
-  nav {
+  nav:not(#main-nav) {
     flex-direction: column;
     gap: 0.5rem;
+  }
+  nav#main-nav {
+    width: 100vw;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 56px;
+  }
+  nav#main-nav a {
+    flex: 1 1 0;
+    text-align: center;
+    min-width: 0;
+    font-size: 0.95rem;
+    padding: 10px 2px;
+    white-space: nowrap;
   }
 }
 

@@ -502,4 +502,27 @@ nav a:hover {
   color: #0066CC !important;
   transform: scale(1.08);
   transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+/* Floating WhatsApp and Instagram Icons */
+.whatsapp-float, .instagram-float {
+  position: fixed;
+  z-index: 9999;
+  right: 24px;
+  transition: transform 0.2s;
+}
+.whatsapp-float {
+  bottom: 90px;
+}
+.instagram-float {
+  bottom: 24px;
+}
+.whatsapp-float img, .instagram-float img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.18);
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+.whatsapp-float:hover img, .instagram-float:hover img {
+  transform: scale(1.15);
+  box-shadow: 0 4px 16px rgba(25,118,210,0.22);
 } 

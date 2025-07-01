@@ -48,11 +48,22 @@ nav#main-nav {
   min-height: 68px;
   display: flex;
   align-items: center;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-color: #ffd600 #1976d2;
+  scrollbar-width: thin;
 }
 
 nav#main-nav a {
   padding-top: 18px;
   padding-bottom: 18px;
+  flex: 1 1 0;
+  text-align: center;
+  min-width: 0;
+  font-size: 0.95rem;
+  padding: 10px 2px;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 nav {
@@ -208,6 +219,18 @@ footer::before {
     align-items: center;
     height: auto;
     min-height: 56px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-color: #ffd600 #1976d2;
+    scrollbar-width: thin;
+  }
+  nav#main-nav::-webkit-scrollbar {
+    height: 6px;
+    background: #1976d2;
+  }
+  nav#main-nav::-webkit-scrollbar-thumb {
+    background: #ffd600;
+    border-radius: 3px;
   }
   nav#main-nav a {
     flex: 1 1 0;
@@ -216,6 +239,7 @@ footer::before {
     font-size: 0.95rem;
     padding: 10px 2px;
     white-space: nowrap;
+    display: inline-block;
   }
 }
 

@@ -5,106 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courses Offered | BrainVine</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #F7F9FC;
-      color: #333;
-    }
-
-    nav {
-      background-color: #0066CC;
-      padding: 15px;
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #FFCC00;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: 30px auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-
-    h1, h2 {
-      color: #0066CC;
-    }
-
-    ul {
-      line-height: 1.8;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #FF6F61;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    .btn:hover {
-      background-color: #e65c50;
-    }
-
-    /* Hover effect for all links */
-    a,
-    .btn,
-    .button,
-    nav a {
-      transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(.4,0,.2,1);
-    }
-    a:hover,
-    .btn:hover,
-    .button:hover,
-    nav a:hover {
-      background: #e0f0ff !important;
-      color: #0066CC !important;
-      transform: scale(1.08);
-      transition: background 0.2s, color 0.2s, transform 0.18s cubic-bezier(.4,0,.2,1);
-    }
-
-    footer {
-      background-color: #0066CC;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 30px;
-    }
-
-    .ielts-link-btn {
-      background: #1976d2 !important;
-      color: #fff !important;
-    }
-    .ielts-link-btn:hover, .ielts-link-btn:focus {
-      background: #1251a3 !important;
-      color: #fff !important;
-      box-shadow: 0 2px 8px rgba(25,118,210,0.18);
-      transform: scale(1.08);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
 </head>
 <body>
 
-<!-- Navigation Bar -->
 <nav id="main-nav">
   <a href="index.html" target="_blank">Home</a>
   <a href="about.html" target="_blank">About</a>
@@ -116,47 +23,78 @@
 </nav>
 
 <!-- Courses Page Heading -->
-<div class="section">
-  <h1>Our Courses at BrainVine</h1>
+<section class="section" data-section>
+  <h1 class="section-title">Our Courses at BrainVine</h1>
   <p>We offer a variety of courses to help you succeed in communication, academics, and exams like IELTS. Below are detailed descriptions of each course we provide:</p>
-</div>
+</section>
 
 <!-- Spoken English -->
-<div class="section">
-  <h2>Spoken English</h2>
+<section class="section" data-section>
+  <h2 class="section-title">Spoken English</h2>
   <p>Enhance your spoken English with daily speaking practice, vocabulary building, grammar correction, and confidence-boosting activities.</p>
   <p><strong>Fees:</strong> ₹600 per month</p>
-  <a href="https://wa.me/917696538769" class="btn">Join Spoken English</a>
-</div>
+  <a href="https://wa.me/917696538769" class="button">Join Spoken English</a>
+</section>
 
 <!-- IELTS Preparation -->
-<div class="section">
-  <h2>IELTS Coaching</h2>
+<section class="section" data-section>
+  <h2 class="section-title">IELTS Coaching</h2>
   <p>Get trained in all IELTS modules: Listening, Reading, Writing, and Speaking. Focus on tips, tricks, and scoring strategies.</p>
   <p><strong>Specialized Band-targeted classes available.</strong></p>
-  <a href="ielts.html" class="btn ielts-link-btn" style="margin-bottom:10px;">View Full IELTS Details</a>
-  <a href="https://wa.me/917696538769" class="btn">Join IELTS Coaching</a>
-</div>
+  <a href="ielts.html" class="button ielts-link-btn" style="margin-bottom:10px;">View Full IELTS Details</a>
+  <a href="https://wa.me/917696538769" class="button">Join IELTS Coaching</a>
+</section>
+
+<!-- Country Flags for IELTS Destinations -->
+<section class="section" data-section style="margin-top:-2rem;">
+  <h2 class="section-title" style="font-size:1.5rem; margin-bottom:1.2rem;">Where Our Students Go</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2.5rem; margin-bottom:1.5rem;">
+    <div style="flex:1 1 180px; min-width:160px; text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="Canada Flag" style="width:64px; height:40px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:0.5rem;">
+      <div style="font-weight:600; color:#1976d2;">Canada</div>
+      <div style="font-size:0.98em; color:#444;">IELTS is required for university admission and Express Entry immigration.</div>
+    </div>
+    <div style="flex:1 1 180px; min-width:160px; text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="USA Flag" style="width:64px; height:40px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:0.5rem;">
+      <div style="font-weight:600; color:#1976d2;">USA</div>
+      <div style="font-size:0.98em; color:#444;">Accepted by 3,400+ institutions, including Ivy League universities.</div>
+    </div>
+    <div style="flex:1 1 180px; min-width:160px; text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" alt="UK Flag" style="width:64px; height:40px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:0.5rem;">
+      <div style="font-weight:600; color:#1976d2;">United Kingdom</div>
+      <div style="font-size:0.98em; color:#444;">Required for UK Visas & Immigration and all UK universities.</div>
+    </div>
+    <div style="flex:1 1 180px; min-width:160px; text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg" alt="Australia Flag" style="width:64px; height:40px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:0.5rem;">
+      <div style="font-weight:600; color:#1976d2;">Australia</div>
+      <div style="font-size:0.98em; color:#444;">Accepted for study, work, and skilled migration.</div>
+    </div>
+    <div style="flex:1 1 180px; min-width:160px; text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg" alt="New Zealand Flag" style="width:64px; height:40px; object-fit:cover; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); margin-bottom:0.5rem;">
+      <div style="font-weight:600; color:#1976d2;">New Zealand</div>
+      <div style="font-size:0.98em; color:#444;">Accepted for university admission, skilled migration, and work visas.</div>
+    </div>
+  </div>
+</section>
 
 <!-- Academic Classes -->
-<div class="section">
-  <h2>Academic Support</h2>
+<section class="section" data-section>
+  <h2 class="section-title">Academic Support</h2>
   <ul>
     <li>✅ Class 10 – All Subjects</li>
     <li>✅ Class 11 & 12 – Commerce Stream (Accountancy, Business, Economics, etc.)</li>
     <li>✅ B.Com (Punjab University) – All Semesters</li>
   </ul>
-  <a href="https://wa.me/917696538769"
-class="btn">Contact for Academic Classes</a>
-</div>
+  <a href="https://wa.me/917696538769" class="button">Contact for Academic Classes</a>
+</section>
 
 <!-- WhatsApp Demo Request Form -->
 <div style="text-align:center; margin: 40px 0;">
-  <button type="button" class="btn" id="request-demo-btn">Request a Free Demo</button>
+  <button type="button" class="button" id="request-demo-btn">Request a Free Demo</button>
 </div>
-<div id="demo-modal" class="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; overflow:auto; background:rgba(25,118,210,0.25); backdrop-filter:blur(2px);">
-  <div class="modal-content" style="background:#fff; margin:5% auto; padding:2rem 1.5rem 1.5rem 1.5rem; border-radius:1.5rem; box-shadow:0 4px 32px rgba(25,118,210,0.18); max-width:400px; position:relative; display:flex; flex-direction:column; align-items:stretch;">
-    <span class="close" id="close-modal" style="color:#1976d2; position:absolute; top:1rem; right:1.5rem; font-size:2rem; font-weight:bold; cursor:pointer; transition:color 0.2s;">&times;</span>
+<div id="demo-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="close-modal">&times;</span>
     <h2>Request a Free Demo</h2>
     <form id="demo-form">
       <label for="name">Name:</label>
@@ -167,7 +105,7 @@ class="btn">Contact for Academic Classes</a>
       <input type="email" id="email" name="email" required>
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="3" placeholder="Your message (optional)"></textarea>
-      <button type="submit" class="btn">Send on WhatsApp</button>
+      <button type="submit" class="button">Send on WhatsApp</button>
     </form>
   </div>
 </div>
@@ -199,11 +137,6 @@ class="btn">Contact for Academic Classes</a>
     this.reset();
   };
 </script>
-
-<!-- Footer -->
-<footer>
-  ©️ 2025 BrainVine Classes | All Rights Reserved
-</footer>
 
 <a href="https://wa.me/917696538769" class="whatsapp-float" target="_blank">
   <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" width="50px" alt="Chat on WhatsApp">

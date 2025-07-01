@@ -26,30 +26,38 @@
   </section>
   <section class="section" data-section>
     <h2 class="section-title">Inspiring Thoughts from Famous People</h2>
-    <div class="quote-carousel" style="font-size:1.18rem; min-height:110px; max-width:700px; margin:0 auto; text-align:center;">
-      <div class="quote active fade-in">
-        "Success is not final, failure is not fatal: It is the courage to continue that counts." <br><span style="color:#888; font-size:0.98em;">– Winston Churchill</span>
+    <div class="testimonial-container">
+      <div class="testimonial active">
+        <p>"Success is not final, failure is not fatal: It is the courage to continue that counts."</p>
+        <h4>– Winston Churchill</h4>
       </div>
-      <div class="quote">
-        "The only way to do great work is to love what you do." <br><span style="color:#888; font-size:0.98em;">– Steve Jobs</span>
+      <div class="testimonial">
+        <p>"The only way to do great work is to love what you do."</p>
+        <h4>– Steve Jobs</h4>
       </div>
-      <div class="quote">
-        "Our greatest glory is not in never falling, but in rising every time we fall." <br><span style="color:#888; font-size:0.98em;">– Confucius</span>
+      <div class="testimonial">
+        <p>"Our greatest glory is not in never falling, but in rising every time we fall."</p>
+        <h4>– Confucius</h4>
       </div>
-      <div class="quote">
-        "Believe you can and you're halfway there." <br><span style="color:#888; font-size:0.98em;">– Theodore Roosevelt</span>
+      <div class="testimonial">
+        <p>"Believe you can and you're halfway there."</p>
+        <h4>– Theodore Roosevelt</h4>
       </div>
-      <div class="quote">
-        "The future belongs to those who believe in the beauty of their dreams." <br><span style="color:#888; font-size:0.98em;">– Eleanor Roosevelt</span>
+      <div class="testimonial">
+        <p>"The future belongs to those who believe in the beauty of their dreams."</p>
+        <h4>– Eleanor Roosevelt</h4>
       </div>
-      <div class="quote">
-        "You are never too old to set another goal or to dream a new dream." <br><span style="color:#888; font-size:0.98em;">– C.S. Lewis</span>
+      <div class="testimonial">
+        <p>"You are never too old to set another goal or to dream a new dream."</p>
+        <h4>– C.S. Lewis</h4>
       </div>
-      <div class="quote">
-        "Education is the most powerful weapon which you can use to change the world." <br><span style="color:#888; font-size:0.98em;">– Nelson Mandela</span>
+      <div class="testimonial">
+        <p>"Education is the most powerful weapon which you can use to change the world."</p>
+        <h4>– Nelson Mandela</h4>
       </div>
-      <div class="quote">
-        "Don't watch the clock; do what it does. Keep going." <br><span style="color:#888; font-size:0.98em;">– Sam Levenson</span>
+      <div class="testimonial">
+        <p>"Don't watch the clock; do what it does. Keep going."</p>
+        <h4>– Sam Levenson</h4>
       </div>
     </div>
   </section>
@@ -69,15 +77,15 @@
       observer.observe(section);
     });
 
-    // Quote carousel logic
-    let quoteIndex = 0;
-    const quotes = document.querySelectorAll('.quote-carousel .quote');
-    function showQuote() {
-      quotes.forEach(q => q.classList.remove('active', 'fade-in'));
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-      quotes[quoteIndex].classList.add('active', 'fade-in');
+    // Motivation carousel logic (same as testimonial)
+    let index = 0;
+    const testimonials = document.querySelectorAll('.testimonial-container .testimonial');
+    function showTestimonial() {
+      testimonials.forEach(t => t.classList.remove('active'));
+      index = (index + 1) % testimonials.length;
+      testimonials[index].classList.add('active');
     }
-    setInterval(showQuote, 3000);
+    setInterval(showTestimonial, 3000);
   </script>
   <a href="https://wa.me/917696538769" class="whatsapp-float" target="_blank">
     <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" width="50px" alt="Chat on WhatsApp">

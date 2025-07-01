@@ -77,9 +77,9 @@
       observer.observe(section);
     });
 
-    // Motivation carousel logic (same as testimonial)
+    // Testimonial-style quote carousel (copied from testimonials.html)
     let index = 0;
-    const testimonials = document.querySelectorAll('.testimonial-container .testimonial');
+    const testimonials = document.querySelectorAll('.testimonial');
     function showTestimonial() {
       testimonials.forEach(t => t.classList.remove('active'));
       index = (index + 1) % testimonials.length;

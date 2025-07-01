@@ -60,8 +60,8 @@ nav#main-nav a {
   flex: 1 1 0;
   text-align: center;
   min-width: 0;
-  font-size: 0.95rem;
-  padding: 10px 2px;
+  font-size: 12px;
+  padding: 8px 8px;
   white-space: nowrap;
   display: inline-block;
 }
@@ -213,12 +213,8 @@ footer::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    height: auto;
-    min-height: 56px;
+    display: block;
+    height: 48px;
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-color: #ffd600 #1976d2;
@@ -233,13 +229,11 @@ footer::before {
     border-radius: 3px;
   }
   nav#main-nav a {
-    flex: 1 1 0;
-    text-align: center;
-    min-width: 0;
-    font-size: 0.95rem;
-    padding: 10px 2px;
+    font-size: 12px;
+    padding: 8px 8px;
     white-space: nowrap;
     display: inline-block;
+    margin: 0 2px;
   }
 }
 

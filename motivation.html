@@ -21,21 +21,37 @@
   </nav>
   <section class="section" data-section style="text-align:center;">
     <h1 class="section-title" style="font-size:2.2rem;">Motivation for Students</h1>
-    <img src="motivation.jpg" alt="Motivational Posters" style="max-width:420px; width:90%; border-radius:1.2rem; box-shadow:0 2px 16px rgba(25,118,210,0.13); margin-bottom:1.5rem;">
+    <img src="WhatsApp Image 2025-07-01 at 23.39.07.jpeg  " alt="Motivational Posters" style="max-width:420px; width:90%; border-radius:1.2rem; box-shadow:0 2px 16px rgba(25,118,210,0.13); margin-bottom:1.5rem;">
     <p style="font-size:1.15rem; color:#1976d2; margin-bottom:2rem;">Let these thoughts inspire you to keep going, never give up, and believe in yourself!</p>
   </section>
   <section class="section" data-section>
     <h2 class="section-title">Inspiring Thoughts from Famous People</h2>
-    <ul style="font-size:1.12rem; line-height:2; max-width:700px; margin:0 auto;">
-      <li>"Success is not final, failure is not fatal: It is the courage to continue that counts." <br><span style="color:#888; font-size:0.98em;">– Winston Churchill</span></li>
-      <li>"The only way to do great work is to love what you do." <br><span style="color:#888; font-size:0.98em;">– Steve Jobs</span></li>
-      <li>"Our greatest glory is not in never falling, but in rising every time we fall." <br><span style="color:#888; font-size:0.98em;">– Confucius</span></li>
-      <li>"Believe you can and you're halfway there." <br><span style="color:#888; font-size:0.98em;">– Theodore Roosevelt</span></li>
-      <li>"The future belongs to those who believe in the beauty of their dreams." <br><span style="color:#888; font-size:0.98em;">– Eleanor Roosevelt</span></li>
-      <li>"You are never too old to set another goal or to dream a new dream." <br><span style="color:#888; font-size:0.98em;">– C.S. Lewis</span></li>
-      <li>"Education is the most powerful weapon which you can use to change the world." <br><span style="color:#888; font-size:0.98em;">– Nelson Mandela</span></li>
-      <li>"Don't watch the clock; do what it does. Keep going." <br><span style="color:#888; font-size:0.98em;">– Sam Levenson</span></li>
-    </ul>
+    <div class="quote-carousel" style="font-size:1.18rem; min-height:110px; max-width:700px; margin:0 auto; text-align:center;">
+      <div class="quote active fade-in">
+        "Success is not final, failure is not fatal: It is the courage to continue that counts." <br><span style="color:#888; font-size:0.98em;">– Winston Churchill</span>
+      </div>
+      <div class="quote">
+        "The only way to do great work is to love what you do." <br><span style="color:#888; font-size:0.98em;">– Steve Jobs</span>
+      </div>
+      <div class="quote">
+        "Our greatest glory is not in never falling, but in rising every time we fall." <br><span style="color:#888; font-size:0.98em;">– Confucius</span>
+      </div>
+      <div class="quote">
+        "Believe you can and you're halfway there." <br><span style="color:#888; font-size:0.98em;">– Theodore Roosevelt</span>
+      </div>
+      <div class="quote">
+        "The future belongs to those who believe in the beauty of their dreams." <br><span style="color:#888; font-size:0.98em;">– Eleanor Roosevelt</span>
+      </div>
+      <div class="quote">
+        "You are never too old to set another goal or to dream a new dream." <br><span style="color:#888; font-size:0.98em;">– C.S. Lewis</span>
+      </div>
+      <div class="quote">
+        "Education is the most powerful weapon which you can use to change the world." <br><span style="color:#888; font-size:0.98em;">– Nelson Mandela</span>
+      </div>
+      <div class="quote">
+        "Don't watch the clock; do what it does. Keep going." <br><span style="color:#888; font-size:0.98em;">– Sam Levenson</span>
+      </div>
+    </div>
   </section>
   <footer>
     &copy; 2025 BrainVine Classes. All rights reserved.
@@ -52,6 +68,16 @@
     document.querySelectorAll('[data-section]').forEach(section => {
       observer.observe(section);
     });
+
+    // Quote carousel logic
+    let quoteIndex = 0;
+    const quotes = document.querySelectorAll('.quote-carousel .quote');
+    function showQuote() {
+      quotes.forEach(q => q.classList.remove('active', 'fade-in'));
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      quotes[quoteIndex].classList.add('active', 'fade-in');
+    }
+    setInterval(showQuote, 3000);
   </script>
   <a href="https://wa.me/917696538769" class="whatsapp-float" target="_blank">
     <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" width="50px" alt="Chat on WhatsApp">

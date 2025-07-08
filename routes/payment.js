@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const { sendEmail } = require('../utils/email');
 // const { sendWhatsApp } = require('../utils/whatsapp');
 // const crypto = require('crypto');
 
@@ -23,15 +22,8 @@ router.post('/', async (req, res) => {
     const place = payment.notes.place || '';
     const course = payment.notes.course || '';
     const amount = payment.amount / 100;
-    const subject = 'New Payment Received';
-    const text = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nPlace: ${place}\nCourse: ${course}\nAmount: ₹${amount}\nPayment ID: ${payment.id}`;
-    try {
-      await sendEmail(process.env.ADMIN_EMAIL, subject, text);
-      // Optionally, send confirmation to user as well:
-      // await sendEmail(email, 'Payment Received', 'Thank you for your payment!');
-    } catch (err) {
-      console.error('Payment notification error:', err);
-    }
+    
+    // Log payment (no email sent)
     console.log('Payment received:', { name, email, phone, place, course, amount });
   }
   res.status(200).json({ status: 'ok' });

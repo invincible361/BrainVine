@@ -29,7 +29,7 @@ header {
 header::after {
   content: "";
   display: block;
-  background: url('peacock-feather.png') no-repeat center/contain;
+  background: url('peacock_feather.jpg') no-repeat center/contain;
   opacity: 0.08;
   height: 80px;
   width: 100%;
@@ -96,7 +96,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, rgba(25,118,210,0.85) 0%, rgba(67,160,71,0.7) 100%), url('krishan-hero2.jpg') top center/80% no-repeat;
+  background: linear-gradient(135deg, rgba(25,118,210,0.85) 0%, rgba(67,160,71,0.7) 100%), url('krishan-hero2.png') top center/80% no-repeat;
   background-blend-mode: overlay;
 }
 
@@ -315,7 +315,7 @@ body::after {
   top: 0;
   width: 120px;
   height: 100vh;
-  background: url('peacock-feather.png') center top no-repeat;
+  background: url('peacock_feather.jpg') center top no-repeat;
   background-size: contain;
   opacity: 0.18;
   z-index: 0;
